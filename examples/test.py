@@ -11,6 +11,6 @@ if __name__ == '__main__':
     # args = parser.parse_args()
     #
     # trace = Ftrace(args.file)
-    trace = Ftrace(r"/Users/passionwang/code/adb-tool/platform-tools 2/systrace/20221023-112035.html")
+    trace = Ftrace(r"../systrace/log/20221023-112035.html")
     print "num_janks: " + str(trace.android.num_janks(interval=None))
     print 'Average FPS: ' + str(trace.android.jankrate(interval=None))
