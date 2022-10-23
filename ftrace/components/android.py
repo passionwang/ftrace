@@ -225,6 +225,7 @@ class Android(FTraceComponent):
     def jank_intervals(self, interval=None):
         """
         Returns list of intervals when a jank (missed frame) occurred.
+        python systrace.py ... (gfx must be seted)
         """
         missedFrames = self.event_intervals('FrameMissed', interval=interval)
         return IntervalList(filter(lambda x:x.value==1, missedFrames))
